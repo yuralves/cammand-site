@@ -1,0 +1,62 @@
+<% include partials/header %>
+
+	<script src="../js/controller/signupCtrl.js"></script>
+
+</head>
+
+<body ng-app="signup" ng-controller="signupCtrl" id="top">
+
+    <% include partials/navbar %> 
+	
+	<!-- body
+   ================================================== -->
+
+		<div class="container">
+		  
+		  <div class="container-inner">
+		    <div class="login">
+		      <h1>Cadastro</h1>
+		    </div>
+		  
+  		  <div class="pre-form">
+  		    <p>Por favor insira seus dados de cadastro:</p>
+  		  </div>
+
+  		  <div class="login-form">
+  		     
+  		     <!--shows any message that comes back with authentication-->
+  		     <% if (message.length > 0) { %>
+  		           <div class="alert alert-danger"><%= message %></div>
+  		     <% } %>
+  		     
+  		    <form class="signupForm" name="signupForm" action="/restricted/signup" method="POST">
+  		      
+  		      <input type="text" name="firstName" placeholder="Nome" ng-required="true" ng-model="name">
+  		      
+  		      <input type="text" name="lastName" placeholder="Sobrenome" ng-required="true" ng-model="lastName">
+  		      
+  		      <input type="email" name="email" placeholder="E-mail" ng-required="true" ng-model="email" unique>
+
+  		      <input type="password" name="password" placeholder="Senha" ng-required="true" ng-model="password" ng-minlength="passwordMinLength">
+  		      <!--<span class="correct" ng-show="password"><i class="fa fa-check"></i></span>
+  		      <span class="wrong" ng-show="!password && password.length > 0"><i class="fa fa-times"></i></span>-->
+  		      
+  		      <input type="password" name="confirmPassword" placeholder="Confirmar senha" ng-required="true" ng-model="confirmPassword">
+  		      <!--<span class="correct" ng-show="(password == confirmPassword) && confirmPassword"><i class="fa fa-check"></i></span>
+  		      <span class="wrong" ng-show="(password != confirmPassword) && confirmPassword"><i class="fa fa-times"></i></span>-->
+  		      
+  		      <button class="btn btn-hfcf btn-block" ng-disabled="signupForm.$invalid || (password != confirmPassword)">Cadastrar-se</button>
+  		      
+  		    </form>
+  		    
+  		    <div class="login-link">
+  		      <p>Já possui um cadastro? Por favor entre sua credenciais na <a href="/restricted/login">página de acesso</a>.</p>
+  		    </div>
+  		    
+  		  </div> <!-- end login-form -->
+		    
+		  </div> <!-- end container-inner -->
+		  
+    </div> <!-- end container -->
+
+<% include partials/footer %>

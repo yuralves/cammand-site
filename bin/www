@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var debug = require('debug')('server');
+
+var db = require('../srv/exports/mongo');
+var app = require('../server');
+
+
+// Connect to Mongo on start
+if(true) {
+  db.connect(process.env.MONGODB_URI, function(err) {
+    if (err) {
+      console.error('Unable to connect to Mongo.');
+      process.exit(1);
+    } else {
+      var port = process.env.PORT || 80;
+      app.set('port', port);
+      app.listen(app.get('port'), function() {
+          console.log('Node app is running at localhost:' + app.get('port'));
+      });
+    }
+  });
+} else {
+  console.error('set "MONGODB_URI" variable to run this application');
+}
+

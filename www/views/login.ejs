@@ -1,0 +1,47 @@
+<% include partials/head %>
+
+<body class="" ng-app="login" ng-controller="loginCtrl" id="top">
+  <div class="wrapper ">
+    <div class="login-panel">
+      <div class="content">
+        <div class="login-form">
+          <div class="col-md-8">
+            <div class="card card-user">
+              <div class="card-header">
+                <h5 class="card-title">Faça seu login</h5>
+              </div>
+              <div class="card-body">
+                <form name="loginForm" action="/restricted/login" method="POST">
+                  <div class="row">
+                    <div class="col-md-11 pr-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" placeholder="Email" name="email" ng-required="true" ng-model="user.name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-11 pr-1">
+                      <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" class="form-control" placeholder="senha" name="password" ng-required="true" ng-model="user.password">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="update ml-auto mr-auto">
+                      <button type="submit" class="btn btn-primary btn-round" ng-disabled="loginForm.$invalid">Login</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<% include partials/scripts %>
+</html>

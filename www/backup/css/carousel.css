@@ -1,0 +1,42 @@
+#myCarousel {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.item img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selected img {
+	opacity:0.5;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background: none;
+  border: none;
+}
+
+.carousel-control.left {
+  margin-left: -25px;
+}
+
+.carousel-control.right {
+  margin-right: -25px;
+}
+
+.carousel-control {
+  width: 0%;
+}
+
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+  color: grey;
+  font-size: 40px;
+}

@@ -1,0 +1,35 @@
+<% include partials/head %>
+
+<body class="" ng-app="balance" ng-controller="balanceCtrl" id="top">
+  <div class="wrapper ">
+    <% include partials/sidebar %>
+    <div class="main-panel">
+      <% include partials/header %>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-title">Verificar Saldo</h5>
+              </div>
+              <div class="card-body">
+                <label>Número da comanda</label>
+                <input type="number" class="form-control" placeholder="1234" ng-model="command.number"><br>
+                <label>Créditos</label>
+                <input type="text" class="form-control" disabled="" placeholder="" value=R${{amount}}>
+                <label>Telefone</label>
+                <input type="text" class="form-control" disabled="" placeholder="" value={{phone}}>
+                <button class="btn btn-primary btn-round" ng-click="getBalance(command)">Verificar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% include partials/scripts %>
+
+</body>
+
+</html>

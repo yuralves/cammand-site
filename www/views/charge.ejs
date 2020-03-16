@@ -1,0 +1,33 @@
+<% include partials/head %>
+
+<body class="" ng-app="charge" ng-controller="chargeCtrl" id="top">
+  <div class="wrapper ">
+    <% include partials/sidebar %>
+    <div class="main-panel">
+      <% include partials/header %>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-title">Carregar Crédito</h5>
+              </div>
+              <div class="card-body">
+                <label>Número da comanda</label>
+                <input type="number" class="form-control" placeholder="1234" ng-model="amounts.id_number">
+                <label>Valor carregado</label>
+                <input type="number" class="form-control" placeholder="R$50,00" ng-model="amounts.balance">
+                <button class="btn btn-primary btn-round" ng-click="charge(amounts)">Carregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% include partials/scripts %>
+
+</body>
+
+</html>

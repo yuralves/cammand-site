@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>DNA Fork - Create Parcel Dashboard</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/vendor.css">  
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/hfcf.css">
+   <link rel="stylesheet" href="../css/dashboard.css">
+
+   <!-- script
+   ================================================== -->
+   <script src="../js/jquery-2.1.3.min.js"></script>
+   <script src="../js/modernizr.js"></script>
+   <script src="../js/pace.min.js"></script>
+   <script src="../lib/angular/angular.js"></script>
+   <script src="../js/plugins.js"></script>
+   <script src="../js/main.js"></script>
+   <script src="../js/app.js"></script>
+	<script type="text/javascript" src="../lib/fusioncharts/js/fusioncharts.js"></script>
+	<script type="text/javascript" src="../lib/fusioncharts/js/fusioncharts.charts.js"></script>
+	<script type="text/javascript" src="../lib/fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+	<script type="text/javascript" src="../lib/angular/angular-fusioncharts.min.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<script type="text/javascript" src="../js/controller/parametrization.js"></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114691568-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-114691568-1');
+		
+	</script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../images/LOGO-DNA_Fork_v1.jpg" type="image/x-icon">
+	<link rel="icon" href="../images/LOGO-DNA_Fork_v1.jpg" type="image/x-icon">
+
+</head>
+
+<body ng-app="parametrization" ng-controller="parametrization" id="dashboard" >
+	<!-- header: fixed top navbar only visbible for mobile devices
+   ================================================== -->
+   <header> 
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand hfcf-logo" href="/">DNA Fork</a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="/restricted/dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+	        <li><a href="/restricted/robot-panel">Robô</a></li>
+	        <% if( user.local.userType === 'Admin') { %>
+				<li><a href="/restricted/parcels-dashboard">Visualizar Parcelas</a></li>
+				<li><a href="/restricted/robot-dashboard">Dashboard Robô</a></li>
+				<li><a href="/restricted/create-market">Parametrizar novo mercado</a></li>
+			<% } %>
+	      </ul>
+			
+			<!-- account and logout -->
+	      <ul class="nav navbar-nav navbar-right">
+		   	<!--<li><a href="/restricted/profile">Conta</a></li>-->
+		   	<li>
+		   		<a class="greeting-nav nav-link-disabled">Logado como 
+					<span class="username-nav">
+						<%= user.local.firstName %>
+					</span>
+				</a>
+			</li>
+		   	<li><a href="/restricted/logout">Logout</a></li>
+		   	<li class="last-update"><a class="nav-link-disabled">Última atualização: {{currentPosition.updated | date:'yyyy-MM-dd HH:mm:ss'}}</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	 </nav>
+
+	</header> <!-- end header -->  
+	
+	<!-- body
+   ================================================== -->
+
+	<!-- Sidebar -->
+	<div class="sidenav">
+
+		<a class="dna-fork-logo" href="/">DNA Fork</a>
+
+		<div class="greeting">
+			<p>Logado como 
+				<span class="username">
+					<%= user.local.firstName %>
+				</span>
+			</p>
+		</div>
+		
+		<!--dashboard control panel-->
+		<div class="control">
+			<a href="/restricted/dashboard">Dashboard</a>
+			<a href="/restricted/robot-panel">Robô</a>
+			<div ng-if="'<%=user.local.userType%>' == 'Admin'">
+				<a href="/restricted/parcels-dashboard">Visualizar Parcelas</a>
+				<a href="/restricted/robot-dashboard">Dashboard Robô</a>
+				<a href="/restricted/create-market">Parametrizar novo mercado</a>
+			</div>
+	   	<!--<a href="#">Serviços</a>-->
+		</div>
+	   
+	   <!--account settings and logout-->
+	   <div class="account">
+	   	<!--<a href="#">Conta</a>-->
+	   	<a href="/restricted/logout">Logout</a>
+	   </div>
+	   
+	</div>
+	
+	<!--dashboard content-->
+	<div class="main" height = "2000" align="center">
+		
+		<div class="container">
+		
+			<h1 class="main-header">Criar Novo Parâmetro de Negociação</h1>
+			
+			<!--display flash messages-->
+			<% if (message.error.length >0) { %>
+	      	<div class="alert alert-danger"><%= message.error %></div>
+	      <% } %>
+	      <% if (message.success.length >0) { %>
+	      	<div class="alert alert-success"><%= message.success %></div>
+	      <% } %>
+	      <% if (message.info.length >0) { %>
+	      	<div class="alert alert-info"><%= message.info %></div>
+	      <% } %>
+	      
+			<!--Sections-->
+			<div>
+				<!--Select Market-->
+				<section align="left">
+					<h2>1.Selecionar mercado a ser parametrizado<br></h2>
+					Moeda Base
+					<select ng-model='baseCoin' ng-options='x for (x,y) in markets'>
+					</select><br>
+					Moeda Troca
+					<select ng-model='tradeCoin' ng-options='x.MarketCurrency for x in baseCoin' ng-change='getCurrencyPrice()'>
+					</select>
+					<br>Valor de compra: {{prices['Bid']}}
+					<br>Valor de venda: {{prices['Ask']}}
+					<br>Último valor: {{prices['Last']}}
+				</section>
+				<!--Create market_distribution parameters-->
+				<section align="left">
+					<h2>2.Determinar parâmetros de negociação</h2>
+					<!--<table>
+						<tr>
+							<th>Market Type</th>
+							<th>Short Term Valorization</th>
+							<th>Long Term Valorization</th>
+							<th>Q</th>
+							<th>Purchase recalculation time (seconds)</th>
+							<th>Sell recalculation time (seconds)</th>
+						</tr>
+						<tr>
+							<td>{{tradeCoin['BaseCurrency']}}-{{tradeCoin['MarketCurrency']}}</td>
+							<td><input type="number" ng-model="shortTermValorization"></td>
+							<td><input type="number" ng-model="longTermValorization"></td>
+							<td><input type="number" ng-model="QValue"></td>
+							<td><input type="number" ng-model="purchaseRecalculationTime"></td>
+							<td><input type="number" ng-model="sellRecalculationTime"></td>
+						</tr>
+					</table>-->
+				</section>
+				<!--Create Parcels-->
+				<section align="left">
+					<h2>3.Criar parcelas para mercado selecionado</h2>
+				</section>
+			</div>
+
+   	</div>
+	</div>
+	    
+<% include partials/footer %>

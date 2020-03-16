@@ -1,0 +1,487 @@
+/* ------------------ */
+/* Base config        */
+/* ------------------ */
+body {
+  background-color: #fff;
+  height: 100%;
+  min-height: 100%;
+  /*variables*/
+  --sidebar-width: 16rem;
+}
+.nav-link-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ===================================================================
+ *  Navbar:
+ *  fixed on top and only visible on small devices
+ * ------------------------------------------------------------------- */
+.navbar {
+  min-height: 60px;
+  max-height: 70px;
+}
+
+.container-fluid {
+  margin: 0 20px;
+}
+.navbar-inverse .navbar-brand {
+  font-size: 3rem;
+  color: white;
+}
+.navbar-nav li>a {
+  font-size: 1.75rem;
+}
+/*greeting message*/
+.navbar-nav li>a.greeting-nav {
+  color: #fff;
+}
+.navbar-nav li>a>span.username-nav {
+  color: #8a3240;
+  font-weight: 700;
+}
+
+/* ===================================================================
+ *  Responsive
+ *  navbar
+ * ------------------------------------------------------------------- */
+@media only screen and (min-width: 850px) {
+  .navbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -3rem;
+  }
+  .navbar-right>.last-update {
+    display: none;
+  }
+}
+/* collapsed view */
+@media only screen and (max-width: 767px) {
+  .container-fluid {
+    margin: 0;
+  }
+  .navbar-inverse .navbar-collapse {
+    background-color: #222;
+    float: right;
+    width: 30%;
+  }
+  .navbar-fixed-top .navbar-collapse {
+    max-height: none;
+    height: 2000px;
+  }
+  .navbar-nav li>a {
+    font-size: 1.7rem;
+  }
+  .navbar-nav {
+    margin: 3rem 0;
+  }
+  .last-update {
+    margin-top: 5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar-inverse .navbar-collapse {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .navbar-inverse .navbar-collapse {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .navbar-inverse .navbar-collapse {
+    width: 50%;
+  }
+}
+
+/* ------------------ */
+/* Sidebar:           */
+/* ------------------ */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: var(--sidebar-width); /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 3rem;
+}
+/* company logo */
+.sidenav .dna-fork-logo {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 7rem;
+}
+/* user greeting message */
+.sidenav .greeting {
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+.sidenav .username {
+  font-size: 2rem;
+  color: #8a3240;
+  font-weight: 700;
+}
+/* dashboard control options */
+.sidenav .control {
+  margin: 2rem 0;
+}
+/* account settings */
+.sidenav .account {
+  margin-top: 10rem;
+}
+.sidenav .last-update-sidebar {
+  margin-top: 10rem;
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #9d9d9d;
+    display: block;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* ------------------ */
+/* Sidebar:           */
+/* resposive          */
+/* ------------------ */
+@media only screen and (max-width: 1200px) {
+  body {
+    /*variables*/
+    --sidebar-width: 15rem;
+  }
+  .sidenav .dna-fork-logo {
+    font-size: 2.8rem;
+  }
+  .sidenav .greeting {
+    font-size: 1.7rem;
+  }
+  .sidenav .username {
+    font-size: 1.85rem;
+  }
+  .sidenav a {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .sidenav .greeting {
+    font-size: 1.6rem;
+  }
+  .sidenav .username {
+    font-size: 1.75rem;
+  }
+    .sidenav a {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 960px) {
+  body {
+    /*variables*/
+    --sidebar-width: 14rem;
+  }
+  .sidenav .dna-fork-logo {
+    font-size: 2.6rem;
+  }
+  .sidenav .greeting {
+    font-size: 1.5rem;
+  }
+  .sidenav .username {
+    font-size: 1.6rem;
+  }
+  .sidenav a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body {
+    /*variables*/
+    --sidebar-width: 13rem;
+  }
+  .sidenav .dna-fork-logo {
+    font-size: 2.4rem;
+  }
+  .sidenav .greeting {
+    font-size: 1.4rem;
+  }
+  .sidenav .username {
+    font-size: 1.5rem;
+  }
+    .sidenav a {
+    font-size: 1.4rem;
+  }
+}
+/* invisible on mobile devices */
+@media only screen and (max-width: 849px) {
+  .sidenav {
+      display: none;
+  }
+}
+
+/* ------------------ */
+/* Page content       */
+/* ------------------ */
+.main {
+    margin-left: var(--sidebar-width); /* Same as the width of the sidebar */
+    margin-bottom: 5rem;
+    padding: 0px 10px;
+    background-color: #fff;
+    min-height:100%;
+}
+.main .main-header {
+    text-align: center;
+    color: #8a3240;
+    margin: 2rem auto;
+    font-size: 5rem;
+    font-weight: 700;
+}
+table {
+  font-family: "montserrat", sans-serif;
+}
+.main .client-table {
+    margin: 8rem auto;
+}
+.main .client-table, th, td {
+    text-align: center;
+}
+.chart-container, .report-chart {
+    margin: 5rem auto;
+}
+/* Robot Panel*/
+.update-button {
+  margin: 5rem auto;
+}
+.update-button>button {
+  background-color: #8a3240;
+  color: #fff;
+  border-radius: 5%;
+  font-weight: 700;
+}
+.robot-record-table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.last-update-div {
+  float: right;
+  color: #222;
+  margin-top: -2rem;
+}
+
+/* ------------------------------ */
+/* Page content: responsive       */
+/* ------------------------------ */
+@media only screen and (max-width: 1350px) {
+  .main {
+    padding: 0;
+  }
+  .container {
+    width: 93%;
+  }
+  .main .main-header {
+    font-size: 4.8rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .main .main-header {
+    font-size: 4.5rem;
+  }
+  th, td {
+    font-size: 1.3rem;
+  }
+  .robot-record-table {
+    width: 60%;
+  }
+  .robot-record-table td, th {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+  .main .main-header {
+    font-size: 4.3rem;
+  }
+  th, td {
+    font-size: 1.25rem;
+  }
+  .robot-record-table {
+    width: 70%;
+  }
+  .robot-record-table td, th {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 100%;
+  }
+  .main .main-header {
+    font-size: 4rem;
+  }
+  th, td {
+    font-size: 1.15rem;
+  }
+  .robot-record-table {
+    width: 80%;
+  }
+  .robot-record-table td, th {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .main .main-header {
+    font-size: 4rem;
+  }
+  th, td {
+    font-size: 1.15rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .container {
+    width: 95%;
+  }
+  .main {
+    margin-top: 10rem;
+    margin-left:0;
+  }
+  .robot-record-table {
+    width: 85%;
+  }
+  .robot-record-table td, th {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .last-update-div {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 98%;
+  }
+  .main .main-header {
+      margin: 1rem auto;
+      font-size: 4rem;
+  }
+  .full-headers {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .last-update-div {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .short-headers {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+  .main .main-header {
+    font-size: 3.8rem;
+  }
+  th, td {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+  .main .main-header {
+    font-size: 3.6rem;
+  }
+  th, td {
+    font-size: 1rem;
+  }
+  .robot-record-table {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .short-headers th>br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0 5px;
+  }
+  .main .main-header {
+    font-size: 3.4rem;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .container {
+    padding: 0 2px;
+  }
+  .main .main-header {
+    font-size: 3.2rem;
+  }
+  th, td {
+    font-size: 0.95rem;
+  }
+}
+
+/* ------------------ */
+/* Profile            */
+/* ------------------ */
+.user-info-field {
+    padding: 0;
+}
+.user-info-label {
+    text-align: left;
+    float: left;
+    display: inline-block;
+}
+.user-data {
+    display: inline-block;
+}
+
+/* ------------------ */
+/* Footer:            */
+/* ------------------ */
+footer {
+    position: relative;
+    margin: 0;
+    margin-left: var(--sidebar-width);
+    height: 10rem;
+    padding-top: 1rem;
+    z-index: 2;
+}
+
+/* ------------------ */
+/* Footer:            */
+/* resposive          */
+/* ------------------ */
+@media only screen and (max-width: 850px) {
+  footer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 450px) {
+  footer {
+    width: 100%;
+    padding-top: 0.3rem;
+  }
+}

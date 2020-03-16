@@ -1,0 +1,947 @@
+/* ===================================================================
+ *  HFCF Landing Page Custom Stylesheet
+ *
+ * ------------------------------------------------------------------- */
+
+/* =================================================================== */
+
+/* ===================================================================
+ *  a. General CSS
+ *
+ * ------------------------------------------------------------------- */
+
+ body {
+  background-color: #222;
+ }
+ 
+/* ===================================================================
+ *  b. Navbar
+ *
+ * ------------------------------------------------------------------- */
+.navbar {
+    min-height: 60px;
+    max-height: 70px;
+}
+
+.container-fluid {
+    margin: 0 20px;
+}
+.navbar-inverse .navbar-brand {
+    font-size: 3rem;
+    color: white;
+}
+
+.navbar-nav li>a {
+    font-size: 1.75rem;
+}
+
+/* ===================================================================
+ *  Responsive
+ *  navbar
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .navbar-nav li>a {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-nav li>a {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 902px) {
+  .navbar-nav li>a {
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .navbar-nav li>a {
+    font-size: 1.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+}
+
+/* collapsed view */
+@media only screen and (max-width: 767px) {
+  .container-fluid {
+    margin: 0;
+  }
+  .navbar-inverse .navbar-collapse {
+    background-color: #222;
+    float: right;
+    width: 30%;
+  }
+  .navbar-fixed-top .navbar-collapse {
+    max-height: none;
+    height: 2000px;
+  }
+  .navbar-nav li>a {
+    font-size: 1.7rem;
+  }
+  .navbar-nav {
+    margin: 3rem 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-inverse .navbar-collapse {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-inverse .navbar-collapse {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navbar-inverse .navbar-collapse {
+    width: 50%;
+  }
+}
+
+/* ===================================================================
+ *  01. Home
+ *
+ * ------------------------------------------------------------------- */
+ #home .row {
+     width: 100%;
+     max-width: 100%;
+     margin: 0;
+ }
+ 
+ #home h1 {
+    font-size: 15rem;
+ }
+ 
+ #home h3 {
+    font-size: 4rem;
+ }
+ 
+ /* ===================================================================
+ *  Responsive
+ *  home section
+ * ------------------------------------------------------------------- */
+ @media only screen and (max-width: 1200px) {
+  #home h1 {
+    font-size: 12rem;
+  }
+  #home h3 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #home h1 {
+    font-size: 11rem;
+  }
+  #home h3 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #home h1 {
+    font-size: 10rem;
+  }
+  #home h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #home h1 {
+    font-size: 9rem;
+  }
+  #home h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #home h1 {
+    font-size: 8rem;
+  }
+  #home h3 {
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #home h1 {
+    font-size: 7.5rem;
+  }
+  #home h3 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #home h1 {
+    font-size: 7rem;
+  }
+  #home h3 {
+    font-size: 1.8rem;
+  }
+}
+ 
+ /* ===================================================================
+ *  02. About
+ *
+ * ------------------------------------------------------------------- */
+#about {
+    background-color: #fff;
+}
+
+#about .about-wrap {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#about h3 {
+    color: #8a3240;
+}
+
+#about span {
+    color: #8a3240;
+}
+
+
+/* ===================================================================
+ *  03. Values
+ *
+ * ------------------------------------------------------------------- */
+ #values {
+  background-color: #e9eaea;
+  padding-top: 5rem; 
+ }
+ #values .section-intro.with-bottom-sep {
+     margin: 0 auto;
+ }
+ #values .intro-wrap {
+  padding: 10rem 0 2rem;
+ }
+ #values .section-intro.with-bottom-sep::after {
+  background-color: #8a3240;
+  opacity: 0.25;
+ }
+ #values h3 {
+  margin-top: 2rem;
+  color: #8a3240;
+ }
+ #values .values-list.block-1-2.block-tab-full.group {
+  margin-bottom: 5rem;
+ }
+ .values-item {
+  padding: 5rem auto 5rem auto;
+ }
+ .values-content {
+  width: 70%;
+  height: 90%;
+  margin: 0 auto 0 auto;
+  padding-bottom: 5%;
+  position: relative;
+  text-align: center;
+ }
+ #values .values-content .icon i {
+  font-size: 5.4rem;
+  color: #8a3240;
+ }
+ #values h3.h05 {
+  font-size: 1.8rem;
+ }
+ #values li {
+  list-style-type: none;
+  font-size: 1.7rem;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  values section
+ * ------------------------------------------------------------------- */
+ @media only screen and (max-width: 1200px) {
+  #values h3 {
+    font-size: 2.2rem;
+  }
+  #values h1 {
+    font-size: 4.6rem;
+  }
+  #values h3.h05 {
+    font-size: 1.7rem;
+  }
+  #values li {
+    font-size: 1.5rem;
+  }
+  #values .values-content-container {
+   width: 50%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #values h3 {
+    font-size: 2rem;
+  }
+  #values h1 {
+    font-size: 4.5rem;
+  }
+  #values h3.h05 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #values h3.h05 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #values .row {
+    max-width: 600px;
+  }
+  #values h3 {
+    font-size: 1.8rem;
+  }
+  #values h1 {
+    font-size: 4.5rem;
+  }
+  #values h1 br {
+    display: none;
+  }
+  #values .values-content-container {
+   width: 80%;
+   margin-left: 10%;
+   margin-right: 10%;
+  }
+  #values .values-item {
+   height: 25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #values {
+    min-height: 702px;
+  }
+ 
+  #values .row .section-intro .with-bottom-sep {
+    max-width: 500px;
+    padding-top: 4.8rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  #values h3 {
+    font-size: 1.7rem;
+  }
+  
+  #values h1 {
+    font-size: 4.3rem;
+  }
+  
+  #values .values-content-container {
+   margin-bottom: 1rem;
+   width: 100%;
+   margin-left: 0;
+   margin-right: 0;
+  }
+  
+  #values .values-content {
+   width:90%;
+  }
+  
+  #values .values-item {
+   height:20rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #values h3 {
+    font-size: 1.7rem;
+  }
+  #values h1 {
+    font-size: 3.6rem;
+  }
+  #values li {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #values h3 {
+    font-size: 1.6rem;
+  }
+  #values h1 {
+    font-size: 3.4rem;
+  }
+}
+
+
+/* ===================================================================
+ *  04. Services
+ *
+ * ------------------------------------------------------------------- */
+ #services .section-intro.with-bottom-sep {
+     margin: 0 auto;
+ }
+ #services .services-content {
+     margin: 0 auto;
+ }
+ #services li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(242, 242, 242, 0.5);
+ }
+
+/* ===================================================================
+ *  05. Markets
+ *
+ * ------------------------------------------------------------------- */
+ #portfolio {
+  background-color: #888888;
+  min-height: 0;
+  padding-bottom: 5rem;
+ }
+ #portfolio .section-intro.with-bottom-sep {
+  margin: 0 auto;
+  padding-bottom: 0;
+ }
+ #portfolio .row {
+  margin: 0 auto;
+ }
+ #portfolio .intro-wrap{
+  background-color: transparent;
+  padding-bottom: 5rem;
+ }
+ #portfolio .container {
+  text-align: center;
+  padding: 0;
+ }
+ #portfolio img {
+  width: 75rem;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  portfolio section
+ * ------------------------------------------------------------------- */
+ @media only screen and (max-width: 1200px) {
+  #portfolio h3 {
+    font-size: 2.2rem;
+  }
+  #portfolio h1 {
+    font-size: 4.6rem;
+  }
+  #portfolio p {
+    font-size: 1.9rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #portfolio h3 {
+    font-size: 2rem;
+  }
+  #portfolio h1 {
+    font-size: 4.4rem;
+  }
+  #portfolio p {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #portfolio h3 {
+    font-size: 2rem;
+  }
+  #portfolio h1 {
+    font-size: 4.2rem;
+  }
+  #portfolio p {
+    font-size: 1.6rem;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #portfolio h3 {
+    font-size: 1.8rem;
+  }
+  #portfolio h1 {
+    font-size: 4rem;
+  }
+  #portfolio p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #portfolio h3 {
+    font-size: 1.8rem;
+  }
+  #portfolio h1 {
+    font-size: 3.8rem;
+  }
+  #portfolio p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #portfolio h3 {
+    font-size: 1.7rem;
+  }
+  #portfolio h1 {
+    font-size: 3.6rem;
+  }
+  #portfolio p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #portfolio h3 {
+    font-size: 1.6rem;
+  }
+  #portfolio h1 {
+    font-size: 3.4rem;
+  }
+  #portfolio p {
+    font-size: 1.6rem;
+  }
+}
+ 
+ /* ===================================================================
+ *  06. History
+ *
+ * ------------------------------------------------------------------- */
+ /*#history {*/
+ /* background-color: #e9eaea;*/
+ /*}*/
+ 
+ /*#history .intro-wrap {*/
+ /* padding: 10rem 0 2rem;*/
+ /*}*/
+ 
+ /*#history .section-intro.with-bottom-sep {*/
+ /*    margin: 0 auto;*/
+ /*}*/
+ 
+ /*#history .section-intro.with-bottom-sep::after {*/
+ /* background-color: #07617d;*/
+ /* opacity: 0.25;*/
+ /*}*/
+ 
+ /*#history h3 {*/
+ /* margin-top: 10rem;*/
+ /* color: #07617d;*/
+ /*}*/
+ 
+ /*#history .row {*/
+ /*  margin: 0 auto;*/
+ /*}*/
+ 
+ /*#history .history-row {*/
+ /*  padding: 0 0 10rem 0;*/
+ /*}*/
+ 
+ /*.history-container {*/
+ /*  width:40%;*/
+ /*  float: left;*/
+ /*  margin: 1rem 5% 5rem 5%;*/
+ /*}*/
+ 
+ /*.history-chart {*/
+ /*  width: 100%;*/
+ /*  height: 35rem;*/
+ /*  display: inline-block;*/
+ /*  background-color: #FFF;*/
+ /*  border: 2px solid black;*/
+ /*  text-align: center;*/
+ /*}*/
+ 
+ 
+/* ===================================================================
+ *  Responsive
+ *  history section
+ * ------------------------------------------------------------------- */
+/* @media only screen and (max-width: 1200px) {*/
+/*  #history h3 {*/
+/*    font-size: 2.2rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 4.6rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.9rem;*/
+/*  }*/
+/*  #history .history-chart {*/
+/*   height: 30rem;*/
+/*  }*/
+/*}*/
+/*@media only screen and (max-width: 1024px) {*/
+/*  #history h3 {*/
+/*    font-size: 2rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 4.4rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.8rem;*/
+/*  }*/
+/*  #history .history-container {*/
+/*    width: 60%;*/
+/*    float: none;*/
+/*    margin-left: 20%;*/
+/*    margin-right: 20%;*/
+/*  }*/
+/*  #history .history-chart {*/
+/*   width: 100%;*/
+/*   display: block;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 960px) {*/
+/*  #history h3 {*/
+/*    font-size: 2rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 4.2rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.6rem;*/
+/*    width: 90%;*/
+/*    margin-left: 5%;*/
+/*    margin-right: 5%;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 768px) {*/
+/*  #history h3 {*/
+/*    font-size: 1.8rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 4rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.6rem;*/
+/*  }*/
+/*  #history .history-container {*/
+/*    width: 70%;*/
+/*    margin-left: 15%;*/
+/*    margin-right: 15%;*/
+/*  }*/
+/*  #history .history-chart {*/
+/*   width: 100%;*/
+/*   height: 28rem;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 600px) {*/
+/*  #history h3 {*/
+/*    font-size: 1.8rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 3.8rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.6rem;*/
+/*  }*/
+/*  #history .history-container {*/
+/*    width: 80%;*/
+/*    margin-left: 10%;*/
+/*    margin-right: 10%;*/
+/*  }*/
+/*  #history .history-chart {*/
+/*   width: 100%;*/
+/*   height: 25rem;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 500px) {*/
+/*  #history h3 {*/
+/*    font-size: 1.7rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 3.6rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.6rem;*/
+/*  }*/
+/*  #history .history-container {*/
+/*    width: 90%;*/
+/*    margin-left: 5%;*/
+/*    margin-right: 5%;*/
+/*  }*/
+/*  #history .history-chart {*/
+/*   height: 23rem;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 400px) {*/
+/*  #history h3 {*/
+/*    font-size: 1.6rem;*/
+/*  }*/
+/*  #history h1 {*/
+/*    font-size: 3.4rem;*/
+/*  }*/
+/*  #history p {*/
+/*    font-size: 1.6rem;*/
+/*  }*/
+/*  #history .history-container {*/
+/*    width: 95%;*/
+/*    margin-left: 2.5%;*/
+/*    margin-right: 2.5%;*/
+/*  }*/
+/*  #history .history-chart {*/
+/*   height: 20rem;*/
+/*  }*/
+/*}*/
+  /* ===================================================================
+ *  07.Team
+ *
+ * ------------------------------------------------------------------- */
+ #team {
+  background-color: #e9eaea;
+  padding-bottom: 10rem;
+ }
+ 
+  #team .intro-wrap {
+  padding: 2rem 0 2rem;
+ }
+ 
+ #team .section-intro.with-bottom-sep {
+  margin: 0 auto;
+  padding-bottom: 0;
+ }
+ 
+ #team .section-intro.with-bottom-sep::after {
+  background-color: #07617d;
+  opacity: 0.25;
+ }
+ 
+ #team .row {
+   margin: 0 auto;
+ }
+ 
+ #team .team-row {
+   width:100%;
+   height: 35rem;
+   margin: 3rem 0;
+ }
+ 
+ #team .team-member {
+   width: 40%;
+   height: 100%;
+   margin: 0 5%;
+   background-color: transparent;
+   text-align: center;
+   float: left;
+ }
+ 
+ #team .team-picture {
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem auto 2rem auto;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+ }
+ 
+ #team .team-picture img {
+  border:2px solid black;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+ }
+ 
+ #team h3 {
+  margin-top: 10rem;
+  color: #07617d;
+ }
+ 
+ .team-name h4 {
+  margin-bottom: 0;
+  font-size: 2.3rem;
+  
+ }
+ .team-role p {
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2rem;
+ }
+ 
+ .team-linkedin a {
+   font-size: 1.8rem;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  team section
+ * ------------------------------------------------------------------- */
+ @media only screen and (max-width: 1200px) {
+  #team h3 {
+    font-size: 2.2rem;
+  }
+  #team h1 {
+    font-size: 4.6rem;
+  }
+  #team .team-row {
+    height: 32rem;
+    padding: 0 4rem;
+  }
+  .team-picture {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #team h3 {
+    font-size: 2rem;
+  }
+  #team h1 {
+    font-size: 4.5rem;
+  }
+  #team .team-row {
+    height: 30rem;
+    padding: 0 10rem;
+  }
+  .team-picture {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #team .team-row {
+    padding: 0 8rem;
+  }
+  .team-picture {
+    width: 13rem;
+    height: 13rem;
+  }   
+}
+
+@media only screen and (max-width: 768px) {
+  #team h3 {
+    font-size: 1.8rem;
+  }
+  #team h1 {
+    font-size: 4.5rem;
+  }
+  #team .team-row {
+    padding: 0 3rem;
+  }
+  #team .team-picture {
+    width: 16rem;
+    height: 16rem;
+  }
+  .team-name h4 {
+   font-size: 2.1rem;
+  }
+  .team-role p {
+   font-size: 1.8rem;
+  }
+  .team-linkedin a {
+   font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #team .row .section-intro .with-bottom-sep {
+    max-width: 500px;
+    padding-top: 4.8rem;
+    padding-bottom: 0.3rem;
+  }
+  #team h3 {
+    font-size: 1.7rem;
+  }
+  #team h1 {
+    font-size: 4.3rem;
+  }
+  #team .team-row {
+    height: 28rem;
+    padding: 0 3rem;
+  }
+  #team .team-member {
+   width: 90%;
+   height: 100%;
+   display: block;
+   margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #team h3 {
+    font-size: 1.7rem;
+  }
+  #team h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #team h3 {
+    font-size: 1.6rem;
+  }
+  #team h1 {
+    font-size: 3.4rem;
+  }
+  #team .team-member {
+   width: 100%;
+   padding: 0;
+  }
+}
+ 
+/* ===================================================================
+ *  08.Contact
+ *
+ * ------------------------------------------------------------------- */
+ 
+ #contact .section-intro.with-bottom-sep {
+  margin: 0 auto;
+ }
+ #contact .row {
+  margin: 0 auto;
+ }
+ #contact .col-seven {
+  width: 60%;
+  margin: 0 20%;
+ }
+ #contact button {
+  background-color: #f9a828;
+  color: #000000;
+  font-weight: bold;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  team section
+ * ------------------------------------------------------------------- */
+
+ @media only screen and (max-width: 768px) {
+  #contact .col-seven {
+   width: 100%;
+   margin: 0;
+  }
+ }
+ 
+ 
+/* ===================================================================
+ *  09.Footer
+ *
+ * ------------------------------------------------------------------- */
+ footer {
+  background-color: #222;
+ }
+ 
+ footer .row {
+  margin: 0 auto;
+ }

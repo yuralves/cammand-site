@@ -1,0 +1,82 @@
+<!-- header: fixed top navbar only visbible for mobile devices
+   ================================================== -->
+   <header> 
+	
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand hfcf-logo" href="/">DNA Fork</a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="/restricted/dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+	        <li><a href="/restricted/robot-panel">Robô</a></li>
+	        <% if( user.local.userType === 'Admin') { %>
+				<li><a href="/restricted/parcels-dashboard">Visualizar Parcelas</a></li>
+				<li><a href="/restricted/robot-dashboard">Dashboard Robô</a></li>
+				<li><a href="/restricted/create-market">Parametrizar novo mercado</a></li>
+			  <% } %>
+	      </ul>
+			
+			<!-- account and logout -->
+	      <ul class="nav navbar-nav navbar-right">
+		   	<!--<li><a href="/restricted/profile">Conta</a></li>-->
+		   	<li>
+		   		<a class="greeting-nav nav-link-disabled">Logado como 
+					<span class="username-nav">
+						<%= user.local.firstName %>
+					</span>
+				</a>
+			</li>
+		   	<li><a href="/restricted/logout">Logout</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	 </nav>
+
+	</header> <!-- end header -->  
+
+	<!-- body
+   ================================================== -->
+
+	<!-- Sidebar -->
+	<div class="sidenav">
+		
+		<a class="dna-fork-logo" href="/">DNA Fork</a>
+		
+		<div class="greeting">
+			<p>Logado como 
+				<span class="username">
+					<%= user.local.firstName %>
+				</span>
+			</p>
+		</div>
+		
+		<!--dashboard control panel-->
+		<div class="control">
+			<a href="/restricted/dashboard">Dashboard</a>
+			<a href="/restricted/robot-panel">Robô</a>
+			<div ng-if="'<%=user.local.userType%>' == 'Admin'">
+				<a href="/restricted/parcels-dashboard">Visualizar Parcelas</a>
+				<a href="/restricted/robot-dashboard">Dashboard Robô</a>
+				<a href="/restricted/create-market">Parametrizar novo mercado</a>
+			</div>
+	   	<!--<a href="#">Serviços</a>-->
+		</div>
+	   
+	   <!--account settings and logout-->
+	   <div class="account">
+	   	<!--<a href="#">Conta</a>-->
+	   	<a href="/restricted/logout">Logout</a>
+	   </div>
+	   
+	</div>

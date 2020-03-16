@@ -1,0 +1,71 @@
+{
+  "name": "hfcfund-site",
+  "version": "0.0.1",
+  "description": "HFCF - High Frequency Crypto Fund website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "array-flatten": "latest",
+    "async": "^0.2.10",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.3.4",
+    "body-parser": "~1.9.2",
+    "compression": "~1.6.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.1",
+    "debug": "~0.7.2",
+    "ejs": "^2.5.8",
+    "express": "~4.14.0",
+    "express-session": "^1.15.6",
+    "mailgun-js": "~0.10.1",
+    "method-override": "^2.3.10",
+    "mime": "latest",
+    "mongodb": "~2.2.25",
+    "mongoose": "^5.0.12",
+    "morgan": "~1.7.0",
+    "nodemailer": "^4.6.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.0",
+    "pg": "^6.1.0",
+    "pg-promise": "^3.2.3"
+  },
+  "engines": {
+    "node": "8.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/cryptorobottrader.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "authors": [
+    "Yuri Berezin Alves",
+    "Lucas Emidio Fernandes Dias"
+  ],
+  "contributors": [],
+  "license": "MIT",
+  "devDependencies": {
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssimport": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2",
+    "passport": "~0.1.17",
+    "passport-local": "~0.1.6"
+  }
+}

@@ -1,0 +1,74 @@
+<% include partials/head %>
+
+<body class="" ng-app="menu" ng-controller="menuCtrl" id="top">
+  <div class="wrapper ">
+    <% include partials/sidebar %>
+    <div class="main-panel">
+      <% include partials/header %>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-11">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-title">Adicionar Item</h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 pr-1">
+                    <label>Nome do produto</label>
+                    <input type="text" class="form-control" placeholder="" ng-model="product.name">
+                  </div>
+                  <div class="col-md-5 pr-1">
+                    <label>Preço</label>
+                    <input type="number" class="form-control" placeholder="" ng-model="product.price">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-11 pr-1">
+                    <label>Descrição</label>
+                    <input type="text" class="form-control" placeholder="" ng-model="product.description">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <button class="btn btn-primary btn-round" ng-click="createProduct(product)">Criar produto</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"> Simple Table</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>Nome do Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th> 
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="item in items">
+                      <td>{{item.name}}</td>
+                      <td>{{item.description}}</td>
+                      <td>R${{item.price}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% include partials/scripts %>
+
+</body>
+
+</html>

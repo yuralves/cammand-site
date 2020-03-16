@@ -1,0 +1,41 @@
+<% include partials/head %>
+
+<body class="" ng-app="checkin" ng-controller="checkinCtrl" id="top">
+  <div class="wrapper ">
+    <% include partials/sidebar %>
+    <div class="main-panel">
+      <% include partials/header %>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-title">Vincular comanda</h5>
+              </div>
+              <div class="card-body">
+                <label>Número da comanda</label>
+                <input type="number" class="form-control" placeholder="1234" ng-model="user.number">
+                <label>Nome Completo</label>
+                <input type="text" class="form-control" placeholder="José da Silva" ng-model="user.name">
+                <label>Celular (com DDD)</label>
+                <input type="text" class="form-control" placeholder="(11) 982549745" ng-model="user.phone">
+                <label>Tipo de Documento</label>
+                <select class="form-control" ng-model="user.document_type_id">
+                  <option ng-repeat="x in documentTypes" value="{{x.id}}">{{x.document_type}}</option>
+                </select>
+                <label>Documento</label>
+                <input type="text" class="form-control" placeholder="33.346.968-9" ng-model="user.document">
+                <button class="btn btn-primary btn-round" ng-click="checkin(user)">Ativar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% include partials/scripts %>
+
+</body>
+
+</html>

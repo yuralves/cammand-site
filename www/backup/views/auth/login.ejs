@@ -1,0 +1,63 @@
+<% include partials/header %>
+
+	<script src="../js/controller/loginCtrl.js"></script>
+	
+</head>
+
+<body ng-app="login" ng-controller="loginCtrl" id="top">
+
+	<% include partials/navbar %>  
+	
+	<!-- body
+   ================================================== -->
+
+		<div class="container">
+		  
+		  <div class="container-inner">
+		    <div class="login">
+		      <h1>Acesso</h1>
+		    </div>
+		  
+  		  <div class="pre-form">
+  		    <p>Por favor insira suas credenciais:</p>
+  		  </div>
+		  
+  		  <div class="login-form">
+  		    
+  		    <!--shows any message that comes back with authentication-->
+  		     <% if (message.length > 0) { %>
+  		           <div class="alert alert-danger"><%= message %></div>
+  		     <% } %>
+  		     
+  		    <form name="loginForm" action="/restricted/login" method="POST">
+  		      
+  		      <input type="email" name="email" placeholder="E-mail" ng-required="true" ng-model="user.name">
+  		      
+  		      <input type="password" name="password" placeholder="Senha" ng-required="true" ng-model="user.password">
+  		      
+  		      <!--<div class="password-block">
+  		        <!--Remember password-->
+  		        <!--<div class="remember">-->
+    		      <!--  <input type="checkbox" name="remember">-->
+    		      <!--  <label class="label" for="remember">Lembrar meus dados</label>-->
+  		        <!--</div>-->
+  		        <!--Forgot Password-->
+  		        <!--<a href="/restricted/reset/forgot" id="forgot-password">Esqueci minha senha</a>-->
+  		      </div>
+  		      
+  		      <button class="btn btn-hfcf btn-block" ng-disabled="loginForm.$invalid">Entrar</button>
+  		      
+  		    </form>
+  		    
+  		    <!--Link to Register page-->
+  		    <form action="/restricted/signup" method="GET">
+  		        <button class="btn btn-hfcf btn-block">Cadastrar-se</button>
+  		    </form>
+  		    
+  		  </div> <!-- end login-form -->
+		    
+		  </div> <!-- end container-inner -->
+		  
+    </div> <!-- end container -->
+
+<% include partials/footer %>

@@ -1,0 +1,319 @@
+/* ===================================================================
+ *  HFCF Login Page Custom Stylesheet
+ *
+ * ------------------------------------------------------------------- */
+
+/* =================================================================== */
+
+/* ===================================================================
+ *  a. General CSS
+ *
+ * ------------------------------------------------------------------- */
+ 
+ body {
+  background-color: #e9eaea;
+  height: 100%;
+ }
+ 
+ /* ===================================================================
+ *  b. Navbar
+ *
+ * ------------------------------------------------------------------- */
+.navbar {
+    min-height: 60px;
+    max-height: 70px;
+}
+.container-fluid {
+    margin: 0 3rem;
+}
+.navbar-inverse .navbar-brand {
+    font-size: 3.5rem;
+    color: white;
+}
+.navbar-nav li>a {
+    font-size: 2rem;
+}
+
+/* ===================================================================
+ *  Responsive
+ *  navbar
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+  .navbar-inverse .navbar-brand {
+    font-size: 3.3rem;
+  }
+  .navbar-nav li>a {
+    font-size: 1.9rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container-fluid {
+    width: 95%;
+    margin: 0 2rem;
+  }
+  .navbar-header::after {
+    display: none;
+  }
+  .clients-nav {
+    width: 50%;
+    float: right;
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container-fluid {
+    width: 95%;
+    margin: 0 1rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container-fluid {
+    width: 98%
+  }
+  .clients-nav {
+    width: 35%;
+  }
+}
+
+/* ===================================================================
+ *  Container
+ *  
+ * ------------------------------------------------------------------- */
+ 
+ .container {
+   margin-top: 0;
+   padding-top: 10rem;
+   margin-bottom: 10rem;
+   height: 100%;
+   min-height: 100%;
+   width: 100%;
+   background-color: #e9eaea;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  container
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+  .container {
+   padding-top: 8rem;
+   margin-bottom: 30rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+ .container {
+  padding-top: 6rem;
+ }
+}
+@media only screen and (max-width: 340px) {
+  .container {
+    margin-bottom: 20rem;
+  }
+}
+
+ /* ===================================================================
+ *  Container-inner
+ *  
+ * ------------------------------------------------------------------- */
+ 
+ .container-inner {
+   width: 40%;
+   margin: 20px auto;
+   height: 100%;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  container-inner
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+  .container-inner {
+   width: 50%;
+ }
+}
+@media only screen and (max-width: 1024px) {
+  .container-inner {
+   width: 60%;
+ }
+}
+@media only screen and (max-width: 902px) {
+  .container-inner {
+   width: 70%;
+ }
+}
+@media only screen and (max-width: 810px) {
+  .container-inner {
+   width: 80%;
+ }
+}
+@media only screen and (max-width: 767px) {
+  .container-inner {
+   width: 85%;
+ }
+}
+@media only screen and (max-width: 600px) {
+  .container-inner {
+   width: 87%;
+ }
+}
+@media only screen and (max-width: 500px) {
+  .container-inner {
+   width: 90%;
+ }
+}
+@media only screen and (max-width: 400px) {
+  .container-inner {
+   width: 95%;
+ }
+}
+ 
+/* ===================================================================
+ *  Form
+ *  
+ * ------------------------------------------------------------------- */
+ 
+ .login h1 {
+   color: #8a3240;
+   font-size: 3.6rem; 
+ }
+ .pre-form {
+   font-size: 1.8rem;
+ }
+ .signupForm {
+   padding-right: 10px;
+ }
+ input {
+   margin: 2rem 0;
+   width: 100%;
+ }
+ /*.signupForm>input {
+   margin: 2rem 0;
+   width: 95%;
+   display: inline-block;
+ }
+ .signupForm>button {
+   width: 95%;
+ }*/
+ input:-webkit-autofill {
+   -webkit-text-fill-color: #333;
+ }
+ input:-webkit-autofill:hover {
+   -webkit-text-fill-color: #8a3240;
+ }
+ .password-block {
+   margin: 2rem 0;
+   padding: 1rem 0;
+ }
+ /*.fa-check, .fa-times {
+   float: right;
+   height: 6rem;
+   line-height: 3rem;
+   padding: 1.5rem 0;
+   margin: 2rem auto;
+   vertical-align: middle;
+ }
+ .correct {
+   color: #249607;
+ }
+ .wrong {
+   color: #db0606;
+ }*/
+ input[type="checkbox"] {
+   width: 2rem;
+   height: 2rem;
+   float: left;
+   margin: 0;
+ }
+ .label {
+   color: #333;
+   font-size: 1.3rem;
+   float: left;
+   font-weight: normal;
+ }
+ .btn-block+.btn-block {
+   margin-top: 0;
+ }
+ .btn-hfcf {
+   background-color: #8a3240;
+   color: #fff;
+   margin: 2rem 0;
+ }
+ #forgot-password {
+   float: right;
+ }
+ 
+/* ===================================================================
+ *  Responsive
+ *  form
+ * ------------------------------------------------------------------- */
+
+ @media only screen and (max-width: 600px) {
+  .login {
+   font-size: 3.4rem; 
+  }
+  .pre-form {
+   font-size: 1.6rem;
+  }
+ }
+ @media only screen and (max-width: 500px) {
+  .login {
+   font-size: 3.2rem; 
+  }
+ }
+ @media only screen and (max-width: 400px) {
+  .login {
+   font-size: 3rem; 
+  }
+  .label {
+   font-size: 1.2rem;
+  }
+  #forgot-password {
+   font-size: 1.3rem;
+  }
+ }
+ @media only screen and (max-width: 350px) {
+  .remember {
+    width: 100%;
+  }
+  #forgot-password {
+   display: block;
+   margin: 3rem auto 1rem;
+   width: 100%;
+   text-align: center;
+  }
+ }
+ 
+/* ------------------ */
+/* Footer:            */
+/* ------------------ */
+footer {
+  position: relative;
+  text-align: center;
+  padding-top: 1rem;
+  z-index: 2;
+  margin: 0;
+  background-color: #222;
+  height: 10rem;
+}
+footer .row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ------------------ */
+/* Footer:            */
+/* resposive          */
+/* ------------------ */
+@media only screen and (max-width: 850px) {
+  footer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  footer {
+    width: 100%;
+    padding-top: 0.3rem;
+  }
+}
